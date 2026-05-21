@@ -190,9 +190,10 @@ h1 {
 .icon-location {
   display: inline-grid;
   place-items: center;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   color: var(--accent);
+  flex-shrink: 0;
 }
 
 .icon-phone::before {
@@ -267,9 +268,18 @@ h1 {
 
 .section-inner {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 139, 51, 0.12);
+  border: 2px solid rgba(255, 139, 51, 0.14);
   border-radius: 28px;
   padding: 2rem;
+}
+
+/* Fondo específico para la sección de contacto */
+#contact .section-inner {
+  background-image: linear-gradient(rgba(2,12,24,0.75), rgba(2,12,24,0.85)), url("assets/footer.png");
+  background-size: cover;
+  background-position: center right;
+  border: 1px solid rgba(255, 139, 51, 0.12);
+  color: var(--text);
 }
 
 .about-copy p {
@@ -286,7 +296,7 @@ h1 {
 
 .accordion-card {
   background: rgba(2, 12, 24, 0.9);
-  border: 1px solid rgba(255, 139, 51, 0.14);
+  border: 2px solid rgba(255, 139, 51, 0.16);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -295,7 +305,8 @@ h1 {
   width: 100%;
   text-align: left;
   padding: 1.4rem 1.5rem;
-  font-size: 0.98rem;
+  font-size: 1.15rem;
+  font-weight: 700;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
   color: var(--text);
   border: none;
@@ -386,10 +397,10 @@ h1 {
   padding: 1.3rem;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 139, 51, 0.12);
+  border: 2px solid rgba(255, 139, 51, 0.14);
   color: var(--text);
   text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.15s ease;
 }
 
 .contact-card:hover,
