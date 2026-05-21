@@ -39,9 +39,11 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background-image: linear-gradient(rgba(8, 22, 40, 0.92), rgba(8, 22, 40, 0.92)), url("assets/header.png");
+  background-color: rgba(8, 22, 40, 0.88);
+  background-image: url("assets/header.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 139, 51, 0.12);
 }
@@ -232,6 +234,7 @@ h1 {
 .avatar-frame {
   width: 320px;
   height: 320px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   padding: 0.8rem;
   background: linear-gradient(145deg, rgba(255, 139, 51, 0.12), rgba(255, 255, 255, 0.08));
@@ -239,6 +242,7 @@ h1 {
   display: grid;
   place-items: center;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .avatar-frame img {
@@ -272,7 +276,7 @@ h1 {
 }
 
 .section-inner {
-  background: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.03);
   border: 2px solid rgba(255, 139, 51, 0.14);
   border-radius: 28px;
   padding: 2rem;
@@ -280,32 +284,40 @@ h1 {
 
 /* Fondos específicos para secciones */
 #about .section-inner {
-  background-image: linear-gradient(rgba(2,12,24,0.8), rgba(2,12,24,0.88)), url("assets/about.png");
+  background-color: transparent;
+  background-image: linear-gradient(rgba(2,12,24,0.85), rgba(2,12,24,0.94)), url("assets/about.png");
   background-size: cover;
   background-position: center right;
+  background-attachment: fixed;
 }
 
 #skills .section-inner {
+  background-color: transparent;
   background-image: linear-gradient(rgba(2,12,24,0.8), rgba(2,12,24,0.88)), url("assets/skills.png");
   background-size: cover;
   background-position: center left;
+  background-attachment: fixed;
 }
 
 #projects .section-inner {
+  background-color: transparent;
   background-image: linear-gradient(rgba(2,12,24,0.8), rgba(2,12,24,0.88)), url("assets/projects.png");
   background-size: cover;
   background-position: center right;
+  background-attachment: fixed;
 }
 
 #contact .section-inner {
+  background-color: transparent;
   background-image: linear-gradient(rgba(2,12,24,0.75), rgba(2,12,24,0.85)), url("assets/footer.png");
   background-size: cover;
   background-position: center right;
+  background-attachment: fixed;
   color: var(--text);
 }
 
 .about-copy p {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   line-height: 2;
   color: var(--muted);
   margin-top: 1rem;
